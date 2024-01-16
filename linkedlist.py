@@ -32,4 +32,5 @@ class SinglyLinkedList:
             node = node.next
             if node != some_node: break
 
-
+class CircularlySinglyLinkedList:
+    # TODO:
