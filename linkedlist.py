@@ -3,6 +3,12 @@ class SinglyNode:
         self.data = data
         self.next = ref
 
+class DoublyNode:
+    def __init__(self, data, nxt, prev):
+        self.data = data
+        self.nxt = nxt
+        self.prev = prev
+
 # Implementation of a singly linked list
 class SinglyLinkedList:
     def __init__(self, first_node):
