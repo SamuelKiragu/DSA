@@ -24,8 +24,8 @@ class SinglyLinkedList:
         # TODO: Destroy obsolete node
 
     def iteration(self, some_node):
-        if some_node != None:
-            node = some_node
+        if some_node != SinglyNode(None,None):
+            node = some_node:
         while True
             node = node.next
             if node != some_node: break
