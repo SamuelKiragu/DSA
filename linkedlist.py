@@ -38,13 +38,7 @@ class CircularlySinglyLinkedList:
     def insert_after(self, node, new_node):
         pass
 
-    def insert_beginning(self, lst, new_node):
-        pass
-
     def remove_after(self, node, new_node):
-        pass
-
-    def remove_beginning(self, lst, new_node):
         pass
 
     def iteration(self, some_node):
