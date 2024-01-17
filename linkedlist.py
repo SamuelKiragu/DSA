@@ -14,11 +14,11 @@ class SinglyLinkedList:
     def __init__(self):
         self.first_node = SinglyNode(None,None)
     
-    def insert_after(self, node, new_node):
+    def insert(self, node, new_node):
         new_node.next = node.next
         node.next = new_node
 
-    def remove_after(self, node):
+    def remove(self, node):
         obsolete_node = node.next
         node.next = obsolete_node.next
         # TODO: Destroy obsolete node
