@@ -69,3 +69,43 @@ class CircularlySinglyLinkedList:
             node.data = node.next.data
             node.next = node.next.next
             return removed_data
+
+class DoublyLinkedList:
+    def __init__(self):
+        pass
+
+    def pop(self):
+        pass
+
+    def pop_left(self):
+        pass
+
+    def append_nodeleft(self, node):
+        pass
+
+    def append_node(self, node):
+        pass
+
+    def append_left(self, data):
+        pass
+
+    def append(self, data):
+        pass
+
+    def remove_by_ref(self, node) -> Node:
+        pass
+
+    def add_node(self, curnode, new_node):
+        pass
+
+    def add_node(self, node, new_node):
+        pass
+
+    def search(self, value):
+        pass
+
+    def __iter__(self):
+        pass
+
+    def reviter(self):
+        pass
