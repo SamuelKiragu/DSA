@@ -23,12 +23,12 @@ class SinglyLinkedList:
         node.next = obsolete_node.next
         # TODO: Destroy obsolete node
 
-    def iteration(self, some_node):
-        if some_node != SinglyNode(None,None):
-            node = some_node:
-        while True
-            node = node.next
-            if node != some_node: break
+def iteration(self, some_node):
+    if some_node != None:
+        node = some_node
+    while True:
+        node = node.next
+        if node != some_node: break
 
 # Implementation of a Circularly singly linked list
 class CircularlySinglyLinkedList:
@@ -40,8 +40,3 @@ class CircularlySinglyLinkedList:
 
     def remove_after(self, node, new_node):
         pass
-
-    def iteration(self, some_node):
-        pass
-
-
