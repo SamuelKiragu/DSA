@@ -9,7 +9,7 @@ class DoublyNode:
         self.nxt = nxt
         self.prev = prev
 
-# Implementation of a singly linked list
+# Implementation of a singly linear linked list
 class SinglyLinkedList:
     def __init__(self, first_node):
         self.first_node = first_node
@@ -38,5 +38,24 @@ class SinglyLinkedList:
             node = node.next
             if node != some_node: break
 
+# Implementation of a Circularly singly linked list
 class CircularlySinglyLinkedList:
-    # TODO:
+    def __init__(self, first_node, last_node):
+        pass
+
+    def insert_after(self, node, new_node):
+        pass
+
+    def insert_beginning(self, lst, new_node):
+        pass
+
+    def remove_after(self, node, new_node):
+        pass
+
+    def remove_beginning(self, lst, new_node):
+        pass
+
+    def iteration(self, some_node):
+        pass
+
+
