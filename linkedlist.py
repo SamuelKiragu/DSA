@@ -5,13 +5,14 @@ class SinglyNode:
 
         print(f'Created Node with data value: {self.data}')
 
-class DoublyNode:
-    def __init__(self, data, nxt, prev):
+class Node:
+    def __init__(self, data, next=None, prev=None):
         self.data = data
         self.nxt = nxt
         self.prev = prev
-
-        print(f'Created Node with data value: {self.data}')
+    
+    def __repr__(self) -> str:
+        return f'Node(data={self.data})'
 
 # Implementation of a singly linear linked list
 class SinglyLinkedList:
