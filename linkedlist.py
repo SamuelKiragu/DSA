@@ -32,9 +32,9 @@ class SinglyLinkedList:
 
 # Implementation of a Circularly singly linked list
 class CircularlySinglyLinkedList:
-    def __init__(self, first_node, la):
-        self.first_node = first_node
-        self.last_node = last_node
+    def __init__(self):
+        self.first_node = SinglyNode(None, None)
+        self.last_node = self.first_node
 
     def insert_after(self, node, new_node):
         pass
