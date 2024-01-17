@@ -45,5 +45,8 @@ class CircularlySinglyLinkedList:
         if self.last_node == node:
             self.last_node = new_node
 
+    def insert_before(self, node, new_node):
+        pass
+
     def remove_after(self, node, new_node):
         pass
