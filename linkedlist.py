@@ -54,6 +54,9 @@ class CircularlySinglyLinkedList:
             node.data = new_val
             node.next = new_node
 
-
     def remove(self, node):
-        pass
+        if node != None and len(self) > 1:
+            removed_data = node.data
+            node.data = node.next.data
+            node.next = node.next.next
+            return removed_data
