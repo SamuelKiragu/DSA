@@ -33,10 +33,17 @@ def iteration(self, some_node):
 # Implementation of a Circularly singly linked list
 class CircularlySinglyLinkedList:
     def __init__(self):
-        self.last_node = SinglyNode(None, None)
+        self.last_node = None
 
     def insert_after(self, node, new_node):
-        pass
+        if node = None:
+            new_node.next = new_node
+        else:
+            new_node.next = node.next
+            node.next = new_node
+
+        if self.last_node == node:
+            self.last_node = new_node
 
     def remove_after(self, node, new_node):
         pass
