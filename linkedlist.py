@@ -1,13 +1,17 @@
 class SinglyNode:
-    def __init__(self, data, ref):
+    def __init__(self, data, ref=None):
         self.data = data
         self.next = ref
+
+        print(f'Created Node with data value: {self.data}')
 
 class DoublyNode:
     def __init__(self, data, nxt, prev):
         self.data = data
         self.nxt = nxt
         self.prev = prev
+
+        print(f'Created Node with data value: {self.data}')
 
 # Implementation of a singly linear linked list
 class SinglyLinkedList:
@@ -18,12 +22,16 @@ class SinglyLinkedList:
         new_node.next = node.next
         node.next = new_node
 
+        print(f'Added node {new_node} after node {node}')
+
     def remove_after(self, node):
         obsolete_node = node.next
         node.next = obsolete_node.next
+
+        print(f'Removed node {node}')
         # TODO: Destroy obsolete node
 
-def iteration(self, some_node):
+def iterate(self, some_node):
     if some_node != None:
         node = some_node
     while True:
