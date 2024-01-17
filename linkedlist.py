@@ -36,7 +36,7 @@ class CircularlySinglyLinkedList:
         self.last_node = None
 
     def insert_after(self, node, new_node):
-        if node = None:
+        if node == None:
             new_node.next = new_node
         else:
             new_node.next = node.next
@@ -45,8 +45,15 @@ class CircularlySinglyLinkedList:
         if self.last_node == node:
             self.last_node = new_node
 
-    def insert_before(self, node, new_node):
-        pass
+    def insert_before(self, node, new_val):
+        if node == None:
+            new_node = SinglyNode(new_val, None)
+            new_node.next = new_node
+        else:
+            new_node = SinglyNode(node.data, node.next)
+            node.data = new_val
+            node.next = new_node
 
-    def remove_after(self, node, new_node):
+
+    def remove(self, node):
         pass
