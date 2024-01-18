@@ -72,7 +72,9 @@ class CircularlySinglyLinkedList:
 
 class DoublyLinkedList:
     def __init__(self):
-        pass
+        self.__sentinel = Node(data=None)
+        self.__sentinel.next = self.__sentinel
+        self.__sentinel.prev = self.__sentinel
 
     def pop(self):
         pass
