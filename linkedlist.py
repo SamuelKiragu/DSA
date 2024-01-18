@@ -1,14 +1,14 @@
 class SinglyNode:
-    def __init__(self, data, ref=None):
+    def __init__(self, data, next=None):
         self.data = data
-        self.next = ref
+        self.next = next
 
         print(f'Created Node with data value: {self.data}')
 
 class Node:
     def __init__(self, data, next=None, prev=None):
         self.data = data
-        self.nxt = nxt
+        self.nxt = next
         self.prev = prev
     
     def __repr__(self) -> str:
@@ -32,17 +32,10 @@ class SinglyLinkedList:
         print(f'Removed node {node}')
         # TODO: Destroy obsolete node
 
-def iterate(self, some_node):
-    if some_node != None:
-        node = some_node
-    while True:
-        node = node.next
-        if node != some_node: break
-
 # Implementation of a Circularly singly linked list
 class CircularlySinglyLinkedList:
     def __init__(self):
-        self.last_node = None
+        self.last_node = SinglyLinkedList()
 
     def insert_after(self, node, new_node):
         if node == None:
@@ -108,8 +101,8 @@ class DoublyLinkedList:
     def add_node(self, curnode, new_node):
         new_node.next = curnode.next
         new_node.prev = curnode
-        curnode.next.prev = newnode
-        curnode.next = newnode
+        curnode.next.prev = new_node
+        curnode.next = new_node
 
     def search(self, value):
         self.__sentinel.data = value
