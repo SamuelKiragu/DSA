@@ -20,13 +20,13 @@ class SinglyLinkedList:
     def __init__(self):
         self.first_node = SinglyNode(None)
     
-    def insert_after(self, node, new_node):
+    def insert(self, new_node, node=None):
         new_node.next = node.next
         node.next = new_node
 
         print(f'Added node {new_node} after node {node}')
 
-    def remove_after(self, node):
+    def remove(self, node):
         obsolete_node = node.next
         node.next = obsolete_node.next
 
@@ -37,6 +37,12 @@ class CircularlySinglyLinkedList:
     def __init__(self):
         self.__sentinel = SinglyNode(data=None)
         self.__sentinel.next = self.__sentinel
+
+    def insert(self, new_node):
+        node = self.__sentinel.next
+        while node is not self.__sentinel:
+            node = node.next
+        self.insert_after(node, new_node) 
 
     def insert_after(self, node, new_node):
         new_node.next = node.next
