@@ -77,37 +77,58 @@ class DoublyLinkedList:
         self.__sentinel.prev = self.__sentinel
 
     def pop(self):
-        pass
+        return self.remove_by_ref(self.__sentinel.next)
 
     def pop_left(self):
-        pass
+        return self.remove_by_ref(self.__sentinel.next)
 
     def append_nodeleft(self, node):
-        pass
+        self.add_node(self.__sentinel, node)
 
     def append_node(self, node):
-        pass
+        self.add_node(self.__sentinel.prev, node)
 
     def append_left(self, data):
-        pass
+        node = Node(data=data)
+        self.append_nodeleft(node)
 
     def append(self, data):
-        pass
+        node = Node(data=data)
+        self.append_node(node)
 
     def remove_by_ref(self, node) -> Node:
-        pass
+        if node is self.__sentinel:
+            raise Exception('Can never remove sentinel.')
+        node.prev.next = node.next
+        node.next.next = node.prev
+        node.prev = None
+        node.next = None
+        return node
 
     def add_node(self, curnode, new_node):
-        pass
-
-    def add_node(self, node, new_node):
-        pass
+        new_node.next = curnode.next
+        new_node.prev = curnode
+        curnode.next.prev = newnode
+        curnode.next = newnode
 
     def search(self, value):
-        pass
+        self.__sentinel.data = value
+        node = self.__sentinel.next
+        while node.data != value:
+            node = node.next
+        self.__sentinel.data = None
+        if node is self.__sentinel:
+            return None
+        return node
 
     def __iter__(self):
-        pass
+        node = self.__sentinel.next
+        while node is not self.__sentinel:
+            yield node.data
+            node = node.next
 
     def reviter(self):
-        pass
+        node = self.__sentinel.prev
+        while node is not self.__sentinel:
+            yield node.data
+            node = node.prev
