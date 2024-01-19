@@ -18,8 +18,8 @@ class Node:
 # Implementation of a singly linear linked list
 # Uses Sentinel node
 class SinglyLinkedList:
-    def __init__(self):
-        self.first_node = SinglyNode(None)
+    def __init__(self, first_node=None):
+        self.first_node = first_node
     
     def insert(self, new_node, node=None):
         new_node.next = node.next
