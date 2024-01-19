@@ -7,7 +7,7 @@ class Queue:
         self.items.append(element)
         return element # Return the added element
 
-    def dequeue(self, element):
+    def dequeue(self):
         item = self.items.pop(0)
         return item # Return the removed element
 
@@ -19,7 +19,7 @@ class Queue1:
     def enqueue(self, element):
         pass
 
-    def dequeue(self, element):
+    def dequeue(self):
         pass
 
 # Using Doubly Linked Lists
@@ -30,5 +30,5 @@ class Queue2:
     def enqueue(self, element):
         pass
     
-    def dequeue(self, element):
+    def dequeue(self):
         pass
