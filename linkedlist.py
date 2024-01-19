@@ -33,8 +33,9 @@ class SinglyLinkedList:
         return new_node #TODO: Find a better return value
 
     def remove(self, node):
-        obsolete_node = node.next
-        node.next = obsolete_node.next
+        obsolete_node = node.data
+        node.data = node.next.data
+        node.next = node.next.next
         return obsolete_node
 
 # Implementation of a Circularly Singly Linked List
