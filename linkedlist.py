@@ -16,6 +16,7 @@ class Node:
         return f'Doubly Node(data={self.data})'
 
 # Implementation of a singly linear linked list
+# Uses Sentinel node
 class SinglyLinkedList:
     def __init__(self):
         self.first_node = SinglyNode(None)
@@ -32,7 +33,8 @@ class SinglyLinkedList:
 
         print(f'Removed node {node}')
 
-# Implementation of a Circularly singly linked list
+# Implementation of a Circularly Singly Linked List
+# Uses Sentinel node
 class CircularlySinglyLinkedList:
     def __init__(self):
         self.__sentinel = SinglyNode(data=None)
@@ -61,6 +63,8 @@ class CircularlySinglyLinkedList:
         node.next = node.next.next
         return removed_data
 
+# Implementation of Doubly Circularly Linked List
+# Uses Sentinel node
 class DoublyLinkedList:
     def __init__(self):
         self.__sentinel = Node(data=None)
