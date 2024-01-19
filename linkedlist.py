@@ -18,20 +18,24 @@ class Node:
 # Implementation of a singly linear linked list
 # Uses Sentinel node
 class SinglyLinkedList:
-    def __init__(self, first_node=None):
-        self.first_node = first_node
+    def __init__(self):
+        self.head = Node(None)
     
-    def insert(self, new_node, node=None):
+    def push(self, new_node):
+        node = self.head
+        while(node.next != None):
+            node = node.next
+        self.insert_after(node, new_node)
+
+    def insert_after(self, node, new_node):
         new_node.next = node.next
         node.next = new_node
-
-        print(f'Added node {new_node} after node {node}')
+        return new_node #TODO: Find a better return value
 
     def remove(self, node):
         obsolete_node = node.next
         node.next = obsolete_node.next
-
-        print(f'Removed node {node}')
+        return obsolete_node
 
 # Implementation of a Circularly Singly Linked List
 # Uses Sentinel node
