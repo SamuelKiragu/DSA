@@ -19,12 +19,9 @@ struct node* NewNode(int data) {
 
 // call newNode() three times
 struct node* build123a() {
-  struct node* root = newNode(2);
-  struct node* lChild = newNode(1);
-  struct node* rChild = newNode(3);
-
-  root->left = lChild;
-  root->right = rChild;
-
+  struct node* root = NULL;
+  root = insert(root, 2);
+  root = insert(root, 1);
+  root = insert(root, 3);
   return(root);
 }
