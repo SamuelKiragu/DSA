@@ -1,5 +1,6 @@
 #include <stddef.h> 
 #include <stdbool.h>
+#include <stdlib.h>
 
 struct node {
   int data;
@@ -36,7 +37,7 @@ static int lookup(struct node* node, int target) {
  * pointers.
  * */
 struct node* newNode(int data) {
-  struct node* node = new (struct node); // "new is like malloc"
+  struct node* node = new(sizeof(struct node)); // "new is like malloc"
   node->data = data;
   node->left = NULL;
   node->right = NULL;
