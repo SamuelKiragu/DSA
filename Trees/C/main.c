@@ -1,8 +1,11 @@
+#include <stddef.h> 
+#include <stdbool.h>
+
 struct node {
   int data;
   struct node* left;
   struct node* right;
-}
+};
 
 /*
  * Given a binary tree, return true if a node
@@ -32,7 +35,7 @@ static int lookup(struct node* node, int target) {
  * with the given data and NULL left and right
  * pointers.
  * */
-struct node* NewNode(int data) {
+struct node* newNode(int data) {
   struct node* node = new (struct node); // "new is like malloc"
   node->data = data;
   node->left = NULL;
