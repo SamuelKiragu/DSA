@@ -1,4 +1,11 @@
 #include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+struct fraction {
+  int numerator;
+  int denominator;
+};
 
 void Heap1() {
   int* intPtr;
@@ -42,7 +49,7 @@ char* StringCopy(const char* string) {
   int len;
 
   len = strlen(string) + 1; // +1 to account for the \0
-  new String = malloc(sizeof(char)*len); //elem-size * number-of-elements
+  newString = malloc(sizeof(char)*len); //elem-size * number-of-elements
   assert(newString != NULL); // simplistic error check (a good habit)
   strcpy(newString, string); // copy the passed in string to the block
 
