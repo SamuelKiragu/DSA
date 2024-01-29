@@ -52,3 +52,9 @@ int size(struct node* node) {
     return (size(node->left) + 1 + size(node->right));
   }
 }
+
+int maxDepth(struct node* node) {
+  if(node == NULL) {
+   return 0;
+  }
+}
