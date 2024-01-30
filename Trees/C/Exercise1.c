@@ -92,3 +92,14 @@ void printPostorder(struct node* node) {
   // then deal with the node
   printf("%d", node->data);
 }
+
+int hasPathSum(struct node* node, int sum) {
+  if(node == NULL) {
+    return 0;
+  } else {
+    // otherwise check both subtrees
+    int subSum = sum - node-> data;
+    return(hasPathSum(node->left, subSum) || 
+	   hasPathSum(node->right, subSum));
+  }
+}
