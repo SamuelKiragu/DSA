@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 struct node {
   int data;
   struct node* left;
@@ -56,5 +58,12 @@ int size(struct node* node) {
 int maxDepth(struct node* node) {
   if(node == NULL) {
    return 0;
+  } else {
+    int lDepth = maxDepth(node->left);
+    int rDepth = maxDepth(node->right);
+
+    // use the larger one
+    if (lDepth > rDepth) return (lDepth + 1);
+    else return (rDepth + 1); 
   }
 }
