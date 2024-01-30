@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdio.h>
 
 struct node {
   int data;
@@ -71,4 +72,23 @@ int maxDepth(struct node* node) {
 int minValue(struct node* node) {
   if (node->left == NULL) return node->data;
   else return minValue(node->left);
+}
+
+void printTree(struct node* node) {
+  if (node == NULL) return;
+
+  printTree(node->left);
+  printf("%d", node->data);
+  printTree(node->right);
+}
+
+void printPostorder(struct node* node) {
+  if (node == NULL) return;
+
+  // first recur on both subtrees
+  printPostorder(node->left);
+  printPostorder(node->right);
+
+  // then deal with the node
+  printf("%d", node->data);
 }
