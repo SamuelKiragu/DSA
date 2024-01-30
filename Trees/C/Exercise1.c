@@ -67,3 +67,8 @@ int maxDepth(struct node* node) {
     else return (rDepth + 1); 
   }
 }
+
+int minValue(struct node* node) {
+  if (node->left == NULL) return node->data;
+  else return minValue(node->left);
+}
